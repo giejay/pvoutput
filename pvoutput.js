@@ -70,10 +70,11 @@ function pvoutput(settings) {
      * Temperature  decimal celsius 15.3
      * Voltage  decimal volts   240.1
      */
-    this.getStatus = function() {
+    this.getStatus = function(time) {
         var params = {
             key: apiKey,
             sid: systemId,
+            t: time,
         };
 
         var query = querystring.stringify(params);
